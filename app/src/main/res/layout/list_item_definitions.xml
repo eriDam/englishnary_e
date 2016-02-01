@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".NotesFecha"
+    android:background="@drawable/bg_letras">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/list_item_definitions_text"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:textColor="#137edb"
+        android:textSize="16dp"
+        android:background="#c1f1f5f6" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/list_item_definitions_atribution"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:textColor="#137edb"
+        android:textSize="16dp"
+        android:background="#c1f1f5f6" />
+    </RelativeLayout >
