@@ -39,7 +39,7 @@ public class DefinitionFragment extends Fragment {
                 super.onCreate(savedInstanceState);
                 // Add this line in order for this fragment to handle menu events.
                         setHasOptionsMenu(true);
-            lista = (ListView) findViewById(R.id.listview_definitions);
+
         }
 
     // Inflate the menu; this adds items to the action bar if it is present.
@@ -67,7 +67,7 @@ public class DefinitionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //return inflater.inflate(R.layout.fragment_main, container, false);
-
+        //lista = (ListView) findViewById(R.id.listview_definitions);
         //Inflate root fragment
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
@@ -184,18 +184,20 @@ public class DefinitionFragment extends Fragment {
 
                 return null;
             }
-             @Override
+            // @Override
              protected void onPostExecute(List<Definitions> definitions) {
             /*
             Asignar los objetos de Json parseados al adaptador
              */
                  if(definitions!=null) {
 
-                     DefinitionsAdapter adaptador = new DefinitionsAdapter(getBaseContext(), definitions);
+                     DefinitionsAdapter adaptador = new DefinitionsAdapter(getContext(), definitions);
                      lista.setAdapter(adaptador);
+                     Log.v(LOG_TAG, "definitions Json Str" + definitions);
+                     definitions.toString();
                  }else{
                      Toast.makeText(
-                             getBaseContext(),
+                             getContext(),
                              "Ocurrió un error de Parsing Json",
                              Toast.LENGTH_SHORT)
                              .show();
