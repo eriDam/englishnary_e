@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,6 +33,9 @@ public class DefinitionFragment extends Fragment {
     private static final int DEFINITIONS_LOADER = 0;
     ArrayAdapter<String> mDefinitionsAdapter;
     ListView lista;
+    Button btnBuscar;
+    FetchDefinitionTask definitionTask;
+
     public DefinitionFragment() {
     }
 
@@ -55,7 +59,7 @@ public class DefinitionFragment extends Fragment {
         int id = item.getItemId();
             //Toast.makeText(DefinitionFragment.this, "Awesome you are pushed button ok", Toast.LENGTH_SHORT).show();
             if (id == R.id.action_refresh) {
-                FetchDefinitionTask definitionTask = new FetchDefinitionTask();
+                definitionTask = new FetchDefinitionTask();
                 definitionTask.execute();
                 return true;
         }
@@ -68,9 +72,17 @@ public class DefinitionFragment extends Fragment {
                              Bundle savedInstanceState) {
         //return inflater.inflate(R.layout.fragment_main, container, false);
         //lista = (ListView) findViewById(R.id.listview_definitions);
+
         //Inflate root fragment
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
+        btnBuscar = (Button)rootView.findViewById(R.id.btnBuscar);
+//        btnBuscar = (Button)rootView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.v(LOG_TAG, "Has escrito: ");
+//            }
+//
+//                      });
         // Create data for the ListView.
         String[] wordsArray = {
                 "Access", "Account", "Activity", "Administrative", "Advantage",
