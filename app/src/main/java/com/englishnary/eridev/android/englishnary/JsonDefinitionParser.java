@@ -44,7 +44,7 @@ public class JsonDefinitionParser {
         // Variables locales
         String text = null;
         String atribution = null;
-        //String imagen = null;
+        String definitionsw = null;
 
         // Iniciar objeto
         reader.beginObject();
@@ -55,6 +55,8 @@ public class JsonDefinitionParser {
         while (reader.hasNext()) {
             String name = reader.nextName();
             switch (name) {
+                case "definitions":
+                    definitionsw = reader.nextString();
                 case "text":
                     text = reader.nextString();
 
@@ -68,7 +70,7 @@ public class JsonDefinitionParser {
             }
         }
         reader.endObject();
-        return new Definitions(text, atribution);
+        return new Definitions(definitionsw,text, atribution);
     }
 
 }

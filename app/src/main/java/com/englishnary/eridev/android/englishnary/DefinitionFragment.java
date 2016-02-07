@@ -1,5 +1,6 @@
 package com.englishnary.eridev.android.englishnary;
 //http://www.hermosaprogramacion.com/2015/01/android-json-parsing/
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -197,7 +202,7 @@ public class DefinitionFragment extends Fragment {
                 return null;
             }
             // @Override
-             protected void onPostExecute(List<Definitions> definitions) {
+             protected void onPostExecute(List<Definitions> definitions) throws JSONException {
             /*
             Asignar los objetos de Json parseados al adaptador
              */
@@ -205,6 +210,19 @@ public class DefinitionFragment extends Fragment {
 
                      DefinitionsAdapter adaptador = new DefinitionsAdapter(getContext(), definitions);
                      lista.setAdapter(adaptador);
+                     JSONObject jObject = new JSONObject(definitions);
+                     JSONArray jArray = jObject.getJSONArray("definitions");
+
+                     for(int i = 0 ;i<jArray.size();i++){
+                         JSONObject item = jArray.getJsonObject(i);
+                         definitions.add(new Definitions(item.getString("definitions"),item.getString("text"),item.getString("atribution")));
+                     }
+                     Definitions def = jArray.get(i);
+                     definitions.setText(def.getDefinitions();
+                     text.setText(def.getText();
+                     atribution.setText(def.atribution);
+
+
                      Log.v(LOG_TAG, "definitions Json Str" + definitions);
                      definitions.toString();
                  }else{
