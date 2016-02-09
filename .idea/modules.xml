@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GDG_Englishnary-master.iml" filepath="$PROJECT_DIR$/GDG_Englishnary-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/englishnary_e.iml" filepath="$PROJECT_DIR$/englishnary_e.iml" />
     </modules>
   </component>
 </project>

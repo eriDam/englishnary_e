@@ -11,7 +11,7 @@ public class MenuMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.menu_main);
         iniciarControles();
     }
 
@@ -27,8 +27,8 @@ public class MenuMain extends AppCompatActivity {
         imgButton2.setOnClickListener(new ImageButton.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent abreLessons = new Intent(MenuMain.this, MainActivity.class);
-                startActivity(abreLessons);
+                Intent abreBuscar = new Intent(MenuMain.this, MainActivity.class);
+                startActivity(abreBuscar);
 
             }
         });

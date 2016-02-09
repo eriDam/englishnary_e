@@ -39,13 +39,13 @@ public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
 
         //Obteniendo instancias de los elementos
         TextView list_item_definitions_text = (TextView)v.findViewById(R.id.list_item_definitions_text);
-        TextView list_item_definitions_atribution = (TextView)v.findViewById(R.id.list_item_definitions_atribution);
+        //TextView list_item_definitions_atribution = (TextView)v.findViewById(R.id.list_item_definitions_atribution);
 
         //Obteniendo instancia de la Tarea en la posición actual
         Definitions item = getItem(position);
 
         list_item_definitions_text.setText(item.getText());
-        list_item_definitions_atribution.setText(item.getAtribution());
+        //list_item_definitions_atribution.setText(item.getAtribution());
 
         //Devolver al ListView la fila creada
         return v;
