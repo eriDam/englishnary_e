@@ -1,6 +1,8 @@
 package com.englishnary.eridev.android.englishnary;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +53,49 @@ public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
         return v;
 
     }
+//    @Override
+//    public View newView(Context context, Cursor cursor, ViewGroup parent) {
+//        // Choose the layout type
+//        int viewType = getItemViewType(cursor.getPosition());
+//        int layoutId = -1;
+//        switch (viewType) {
+//            case VIEW_TYPE_TODAY: {
+//                layoutId = R.layout.list_item_forecast_today;
+//                break;
+//            }
+//            case VIEW_TYPE_FUTURE_DAY: {
+//                layoutId = R.layout.list_item_forecast;
+//                break;
+//            }
+//        }
+//
+//        View view = LayoutInflater.from(context).inflate(layoutId, parent, false);
+//
+//        ViewHolder viewHolder = new ViewHolder(view);
+//        view.setTag(viewHolder);
+//
+//        return view;
+//    }
+    @Override
+    public void bindView(View view, Context context, Cursor cursor) {
+
+        RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
+        viewHolder.itemView.toString();
+        int viewType = getItemViewType(cursor.getPosition());
+//        switch (viewType) {
+//            case VIEW_TYPE_TODAY: {
+//                // Get weather icon
+//                viewHolder.iconView.setImageResource(Utility.getArtResourceForWeatherCondition(
+//                        cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
+//                break;
+//            }
+//            case VIEW_TYPE_FUTURE_DAY: {
+//                // Get weather icon
+//                viewHolder.iconView.setImageResource(Utility.getIconResourceForWeatherCondition(
+//                        cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
+//                break;
+         //   }
+        }
 
     /*
      * Este método nos permite obtener el Id de un drawable a través
