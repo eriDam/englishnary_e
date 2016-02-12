@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MenuMain extends AppCompatActivity {
+    //Controles
+    private CardView card_find, card_notes, card_lessons,card_triv,card_player;
     private ImageButton imgButton2;
 
     @Override
@@ -21,22 +23,54 @@ public class MenuMain extends AppCompatActivity {
     //Metodo para recuperar los controles mediante su id, para descargar el onCreate
     private void iniciarControles() {
         //Obtengo los controles mediante su id
-        imgButton2 = (ImageButton) findViewById(R.id.ibtnFind);
+       // imgButton2 = (ImageButton) findViewById(R.id.ibtnFind);
         //Obtengo los controles mediante su id
-        card_maps = (CardView) findViewById(R.id.card_maps);
-        card_players = (CardView) findViewById(R.id.card_players);
-        card_dark = (CardView) findViewById(R.id.card_dark);
+        card_find    = (CardView) findViewById(R.id.card_find);
+        card_notes   = (CardView) findViewById(R.id.card_notes);
+        card_lessons = (CardView) findViewById(R.id.card_lessons);
+        card_triv    = (CardView) findViewById(R.id.card_triv);
 
-  /*Card Lessons         card_maps.setOnClickListener(new CardView.OnClickListener() {
-*/
-        imgButton2.setOnClickListener(new ImageButton.OnClickListener() {
+//        imgButton2.setOnClickListener(new ImageButton.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent abreBuscar = new Intent(MenuMain.this, MainActivity.class);
+//                startActivity(abreBuscar);
+//
+//            }
+//        });
+
+        //EVENTOS
+        card_find.setOnClickListener(new CardView.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent abreBuscar = new Intent(MenuMain.this, MainActivity.class);
                 startActivity(abreBuscar);
+//                Intent abreLessons = new Intent(MainActivity.this, MapsActivity.class);
+//                startActivity(abreLessons);
+
+//                Intent intento = new Intent(Intent.ACTION_VIEW, Uri.parse("http://es.cppreference.com/w/"));
+//                startActivity(intento);
 
             }
         });
+
+        card_notes.setOnClickListener(new CardView.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abreNotas = new Intent(MenuMain.this, MainActivity.class);
+                startActivity(abreNotas);
+            }
+        });
+
+            card_lessons.setOnClickListener(new CardView.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abreNotas = new Intent(MenuMain.this, MainActivity.class);
+                startActivity(abreNotas);
+            }
+        });
+
     }
 
-}
+    }
+

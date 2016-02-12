@@ -1,9 +1,11 @@
 package com.englishnary.eridev.android.englishnary;
 
+import java.io.Serializable;
+
 /**
  * Created by eridev on 31/01/16.
  */
-public class Definitions {
+public class Definitions implements Serializable{
    // private String definitions;
     private String text;
     private String atribution;
