@@ -21,16 +21,15 @@ public class DetailDefActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_detail_def, container, false);
 
-                  // The detail Activity called via intent.  Inspect the intent for definitions data.
-                     Intent intent = getActivity().getIntent();
-                        if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
-                            String forecastStr = intent.getStringExtra(Intent.EXTRA_TEXT);
-                             ((TextView) rootView.findViewById(R.id.tvDefinicion))
-                               .setText(forecastStr);
-                 }
+        // The detail Activity called via intent.  Inspect the intent for definitions data.
+        Intent intent = getActivity().getIntent();
+        if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
+            String dataD = intent.getStringExtra(Intent.EXTRA_TEXT);
+            ((TextView) rootView.findViewById(R.id.tvDefinicion))
+                    .setText(dataD);
+        }
 
         return rootView;
 
-
     }
-}
+    }

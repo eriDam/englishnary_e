@@ -13,8 +13,6 @@ public class DetailDefActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment, new DetailDefActivityFragment())
                     .commit();
-
-
         }
 
     }
