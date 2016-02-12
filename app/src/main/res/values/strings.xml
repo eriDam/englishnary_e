@@ -5,5 +5,8 @@
     <string name="loading">Loading</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_activity_detail_def">DetailDefActivity</string>
+    <string name="empezar">Empezar</string>
+    <string name="inicio">Inicio</string>
+    <string name="devtest">Devtest</string>
 
 </resources>

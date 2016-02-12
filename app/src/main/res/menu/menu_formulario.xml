@@ -1,0 +1,59 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.erika_000.devmanager.Formulario">
+
+
+    <item
+        android:id="@+id/menu_inicio"
+        android:title="@string/inicio"
+        android:icon="@drawable/ic_action_home"
+        android:orderInCategory="30"
+        app:showAsAction="ifRoom|withText"/>
+    <!--<item-->
+        <!--android:id="@+id/menu_devtest"-->
+        <!--android:title="@string/devtest"-->
+        <!--android:icon="@drawable/ic_action_test"-->
+        <!--android:orderInCategory="40"-->
+        <!--app:showAsAction="ifRoom|withText"/>-->
+    <!--<item-->
+        <!--android:id="@+id/menu_lessons"-->
+        <!--android:title="@string/Lessons"-->
+        <!--android:icon="@drawable/ic_lessons_white"-->
+        <!--android:orderInCategory="50"-->
+        <!--app:showAsAction="ifRoom|withText"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/menu_profile"-->
+        <!--android:title="@string/perfil"-->
+        <!--android:icon="@drawable/ic_action_user"-->
+        <!--android:orderInCategory="60"-->
+        <!--app:showAsAction="ifRoom|withText"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/menu_git"-->
+        <!--android:title="@string/code"-->
+        <!--android:icon="@drawable/ic_git_minn"-->
+        <!--android:orderInCategory="70"-->
+        <!--app:showAsAction="ifRoom|withText"/>-->
+
+
+    <!--<item-->
+        <!--android:id="@+id/menu_gestion"-->
+        <!--android:title="Gestión"-->
+        <!--android:icon="@drawable/ic_action_bd_white"-->
+        <!--android:orderInCategory="80"-->
+        <!--app:showAsAction="ifRoom|withText"/>-->
+    <!--<item-->
+        <!--android:id="@+id/menu_blog"-->
+        <!--android:title="Blog Roll"-->
+        <!--android:icon="@drawable/ic_action_labels"-->
+        <!--android:orderInCategory="90"-->
+        <!--app:showAsAction="ifRoom|withText"/>-->
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:icon="@drawable/ic_action_settings"-->
+        <!--android:title="@string/action_settings"-->
+        <!--app:showAsAction="ifRoom|withText"/>-->
+</menu>

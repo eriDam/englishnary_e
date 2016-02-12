@@ -57,18 +57,27 @@ public class MenuMain extends AppCompatActivity {
         card_notes.setOnClickListener(new CardView.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent abreNotas = new Intent(MenuMain.this, MainActivity.class);
+                Intent abreNotas = new Intent(MenuMain.this, NotesFecha.class);
                 startActivity(abreNotas);
             }
         });
 
-            card_lessons.setOnClickListener(new CardView.OnClickListener() {
+        card_lessons.setOnClickListener(new CardView.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent abreNotas = new Intent(MenuMain.this, MainActivity.class);
-                startActivity(abreNotas);
+                Intent abreLes = new Intent(MenuMain.this, WebLessonsAndroid.class);
+                startActivity(abreLes);
             }
         });
+
+        card_triv.setOnClickListener(new CardView.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abreTest = new Intent(MenuMain.this, splash_screen.class);
+                startActivity(abreTest);
+            }
+        });
+
 
     }
 

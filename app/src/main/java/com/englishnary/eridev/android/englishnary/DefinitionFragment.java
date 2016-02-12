@@ -91,15 +91,15 @@ public class DefinitionFragment extends Fragment {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-            Definitions definitionDataInfo = mDefinitionsAdapter.getItem(position);
+                Definitions definitionDataInfo = mDefinitionsAdapter.getItem(position);
         Toast.makeText(getActivity(), "Awesome you are pushed definition " + definitionDataInfo,
                 Toast.LENGTH_LONG).show();
-//        Intent intent = new Intent(getActivity(), NotesFecha.class)
-//                .putExtra(Intent.EXTRA_TEXT, (Parcelable) definitionDataInfo);
-//        startActivity(intent);
+//                Intent intent = new Intent(getActivity(), NotesFecha.class)
+//                        .putExtra(Intent.EXTRA_TEXT, (Parcelable) definitionDataInfo);
+//                startActivity(intent);
 
 //                Intent intent = new Intent(getActivity(), DetailDefActivity.class)
-//                        .putExtra(Intent.EXTRA_TEXT, String.valueOf(definitionDataInfo));
+//                        .putExtra(Intent.EXTRA_TEXT, (definitionDataInfo));
 //                startActivity(intent);
             }
         });
