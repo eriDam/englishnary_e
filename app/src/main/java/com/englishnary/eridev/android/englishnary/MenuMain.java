@@ -19,7 +19,7 @@ public class MenuMain extends AppCompatActivity {
     //Metodo para recuperar los controles mediante su id, para descargar el onCreate
     private void iniciarControles() {
         //Obtengo los controles mediante su id
-        imgButton2 = (ImageButton) findViewById(R.id.imgButton2);
+        imgButton2 = (ImageButton) findViewById(R.id.ibtnFind);
 
 
   /*Card Lessons         card_maps.setOnClickListener(new CardView.OnClickListener() {

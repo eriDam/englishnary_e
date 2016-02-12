@@ -28,16 +28,17 @@
                 android:layout_height="match_parent"
                 android:contentDescription="Me gusta"
                 android:scaleType="center"
-                android:background="#e77822"
+                android:background="#010405"
                 android:src="@drawable/ic_action_user" />
             <ImageButton
-                android:id="@+id/imgButton2"
+                android:id="@+id/ibtnFind"
                 android:src="@android:drawable/ic_menu_search"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="No me gusta"
                 android:scaleType="centerInside"
-                android:background="#f0c907" />
+                android:background="#0c3cdb"
+                android:clickable="true" />
 
         </TableRow>
         <TableRow android:layout_weight="1"
@@ -49,14 +50,14 @@
                 android:layout_height="match_parent"
                 android:contentDescription="Opciones"
                 android:scaleType="centerInside"
-                android:background="#1599e1" />
+                android:background="#0c3cdb" />
             <ImageButton
                 android:id="@+id/imgButton4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="Salir"
                 android:scaleType="centerInside"
-                android:background="#fc0ad08e"
+                android:background="#010405"
                 android:src="@android:drawable/ic_menu_view" />
         </TableRow>
         <TableRow android:layout_weight="1"
@@ -67,7 +68,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="Opciones"
                 android:scaleType="centerInside"
-                android:background="#b3123a"
+                android:background="#010405"
                 android:src="@android:drawable/ic_menu_edit" />
             <ImageButton
                 android:id="@+id/imageButtonExit"
@@ -87,14 +88,14 @@
                 android:layout_height="match_parent"
                 android:contentDescription="Opciones"
                 android:scaleType="centerInside"
-                android:background="#c85a05" />
+                android:background="#0c3cdb" />
             <ImageButton
                 android:id="@+id/imgButton7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="Salir"
                 android:scaleType="centerInside"
-                android:background="#4f0fa9"
+                android:background="#010405"
                 android:src="@android:drawable/ic_menu_agenda" />
 
         </TableRow>
@@ -106,7 +107,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="Opciones"
                 android:scaleType="centerInside"
-                android:background="#35a14f"
+                android:background="#010405"
                 android:src="@android:drawable/ic_menu_manage" />
             <ImageButton
                 android:id="@+id/imgButton9"
@@ -115,7 +116,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="Salir"
                 android:scaleType="centerInside"
-                android:background="#9f2745" />
+                android:background="#0c3cdb" />
         </TableRow>
     </TableLayout>
 

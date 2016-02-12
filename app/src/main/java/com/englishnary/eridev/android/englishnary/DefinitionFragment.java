@@ -1,9 +1,7 @@
 package com.englishnary.eridev.android.englishnary;
 //http://www.hermosaprogramacion.com/2015/01/android-json-parsing/
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -86,43 +85,30 @@ public class DefinitionFragment extends Fragment {
         mDefinitionsAdapter = new DefinitionsAdapter(getActivity(), new ArrayList<Definitions>());
         lista.setAdapter(mDefinitionsAdapter);
 
-//        lista.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //Add Toast
-//                Toast.makeText(getActivity(), "Awesome you are pushed definition",
-//                        Toast.LENGTH_SHORT).show();
-//                // /Toast toast = new Toast.makeText(DefinitionFragment.this, text, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
         definitionTask = new FetchDefinitionTask(getContext(), mDefinitionsAdapter);
         definitionTask.execute();
+
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Definitions definitionDataInfo = mDefinitionsAdapter.getItem(position);
-//        Toast.makeText(getActivity(), "Awesome you are pushed definition "+ definitionDataInfo,
-//                         Toast.LENGTH_LONG).show();
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+            Definitions definitionDataInfo = mDefinitionsAdapter.getItem(position);
+        Toast.makeText(getActivity(), "Awesome you are pushed definition " + definitionDataInfo,
+                Toast.LENGTH_LONG).show();
 //        Intent intent = new Intent(getActivity(), NotesFecha.class)
 //                .putExtra(Intent.EXTRA_TEXT, (Parcelable) definitionDataInfo);
 //        startActivity(intent);
-        Intent intent = new Intent(getActivity(), DetailActivity.class)
-                .putExtra(Intent.EXTRA_TEXT, (Parcelable) definitionDataInfo);
-                startActivity(intent);
-    }
-});
+
+//                Intent intent = new Intent(getActivity(), DetailDefActivity.class)
+//                        .putExtra(Intent.EXTRA_TEXT, String.valueOf(definitionDataInfo));
+//                startActivity(intent);
+            }
+        });
 
 
         return rootView;
     }
 
 
-        /*Step 2:
-        Add APPIKEY in gradle.properties and
-        These code snippets use an open-source library. http://unirest.io/java
-        */
-    //public static ArrayList<Definitions> definitionsData = new ArrayList<Definitions>();
 
 
    }

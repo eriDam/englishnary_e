@@ -27,8 +27,8 @@
         <activity android:name=".MenuMain" >
         </activity>
         <activity
-            android:name=".DetailActivity"
-            android:label="@string/title_activity_detail"
+            android:name=".DetailDefActivity"
+            android:label="@string/title_activity_detail_def"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
