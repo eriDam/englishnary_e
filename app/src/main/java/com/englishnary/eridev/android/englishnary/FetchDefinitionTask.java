@@ -151,6 +151,8 @@ import java.util.List;
         protected void onPostExecute (List < Definitions > definitionsData) {
             if (mDefinitionsAdapter != null) {
                 mDefinitionsAdapter.clear();
+                mDefinitionsAdapter.setData(definitionsData);
+                mDefinitionsAdapter.notifyDataSetChanged();
             } else {
                 mDefinitionsAdapter = new DefinitionsAdapter(mContext, definitionsData);
             }
