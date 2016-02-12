@@ -1,7 +1,9 @@
 package com.englishnary.eridev.android.englishnary;
 //http://www.hermosaprogramacion.com/2015/01/android-json-parsing/
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -101,11 +102,14 @@ public class DefinitionFragment extends Fragment {
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         Definitions definitionDataInfo = mDefinitionsAdapter.getItem(position);
-        Toast.makeText(getActivity(), "Awesome you are pushed definition "+ definitionDataInfo,
-                         Toast.LENGTH_LONG).show();
+//        Toast.makeText(getActivity(), "Awesome you are pushed definition "+ definitionDataInfo,
+//                         Toast.LENGTH_LONG).show();
 //        Intent intent = new Intent(getActivity(), NotesFecha.class)
 //                .putExtra(Intent.EXTRA_TEXT, (Parcelable) definitionDataInfo);
 //        startActivity(intent);
+        Intent intent = new Intent(getActivity(), DetailActivity.class)
+                .putExtra(Intent.EXTRA_TEXT, (Parcelable) definitionDataInfo);
+                startActivity(intent);
     }
 });
 
