@@ -79,17 +79,17 @@ public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
 //
 //        return view;
 //    }
-<<<<<<< HEAD
+
  //    @Override
-=======
 
 
->>>>>>> e3d4f2953f3ac9e9dbefc56dbd831c38ea4471bb
+
     public void bindView(View view, Context context, Cursor cursor) {
 
         RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
         viewHolder.itemView.toString();
         int viewType = getItemViewType(cursor.getPosition());
+
 //        switch (viewType) {
 //            case view: {
 //                // Get weather icon

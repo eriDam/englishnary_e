@@ -45,7 +45,7 @@ import java.util.List;
 
             // Will contain the raw JSON response as a string.
             String definitionsJsonStr = null;
-            Log.i(LOG_TAG, "Try is below");
+
 
             try {
                 // Construct the URL for the Dictionary query

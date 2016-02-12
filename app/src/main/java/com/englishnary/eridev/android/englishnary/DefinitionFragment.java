@@ -10,8 +10,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -83,8 +85,30 @@ public class DefinitionFragment extends Fragment {
         mDefinitionsAdapter = new DefinitionsAdapter(getActivity(), new ArrayList<Definitions>());
         lista.setAdapter(mDefinitionsAdapter);
 
+//        lista.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Add Toast
+//                Toast.makeText(getActivity(), "Awesome you are pushed definition",
+//                        Toast.LENGTH_SHORT).show();
+//                // /Toast toast = new Toast.makeText(DefinitionFragment.this, text, Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
         definitionTask = new FetchDefinitionTask(getContext(), mDefinitionsAdapter);
         definitionTask.execute();
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        Definitions definitionDataInfo = mDefinitionsAdapter.getItem(position);
+        Toast.makeText(getActivity(), "Awesome you are pushed definition "+ definitionDataInfo,
+                         Toast.LENGTH_LONG).show();
+//        Intent intent = new Intent(getActivity(), NotesFecha.class)
+//                .putExtra(Intent.EXTRA_TEXT, (Parcelable) definitionDataInfo);
+//        startActivity(intent);
+    }
+});
+
 
         return rootView;
     }
