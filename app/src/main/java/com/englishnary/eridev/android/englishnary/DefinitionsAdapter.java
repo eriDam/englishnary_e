@@ -16,6 +16,8 @@ import java.util.List;
  */
 public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
 
+    private List<Definitions> data;
+
     public DefinitionsAdapter(Context context, List<Definitions> objects) {
         super(context, 0, objects);
     }
@@ -76,7 +78,8 @@ public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
 //
 //        return view;
 //    }
-    @Override
+
+
     public void bindView(View view, Context context, Cursor cursor) {
 
         RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
@@ -105,6 +108,10 @@ public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
         Context context = getContext();
         return context.getResources()
                 .getIdentifier(nombre, "drawable", context.getPackageName());
+    }
+
+    public void setData(List<Definitions> data) {
+        super.addAll(data);
     }
 }
 
