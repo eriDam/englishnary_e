@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Created by eridev on 1/02/16.
+ * implements Cursor
  */
 public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
 
@@ -53,49 +54,50 @@ public class DefinitionsAdapter extends ArrayAdapter<Definitions> {
         return v;
 
     }
-//    @Override
+//     @Override
 //    public View newView(Context context, Cursor cursor, ViewGroup parent) {
 //        // Choose the layout type
 //        int viewType = getItemViewType(cursor.getPosition());
 //        int layoutId = -1;
-//        switch (viewType) {
-//            case VIEW_TYPE_TODAY: {
-//                layoutId = R.layout.list_item_forecast_today;
-//                break;
-//            }
-//            case VIEW_TYPE_FUTURE_DAY: {
-//                layoutId = R.layout.list_item_forecast;
-//                break;
-//            }
-//        }
+////        switch (viewType) {
+////            case VIEW_TYPE_TODAY: {
+////                layoutId = R.layout.list_item_forecast_today;
+////                break;
+////            }
+////            case VIEW_TYPE_FUTURE_DAY: {
+////                layoutId = R.layout.list_item_forecast;
+////                break;
+////            }
+////        }
 //
 //        View view = LayoutInflater.from(context).inflate(layoutId, parent, false);
 //
-//        ViewHolder viewHolder = new ViewHolder(view);
+//        RecyclerView.ViewHolder viewHolder = new RecyclerView.ViewHolder(view);
 //        view.setTag(viewHolder);
 //
 //        return view;
 //    }
-    @Override
+ //    @Override
     public void bindView(View view, Context context, Cursor cursor) {
 
         RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
         viewHolder.itemView.toString();
         int viewType = getItemViewType(cursor.getPosition());
 //        switch (viewType) {
-//            case VIEW_TYPE_TODAY: {
+//            case view: {
 //                // Get weather icon
 //                viewHolder.iconView.setImageResource(Utility.getArtResourceForWeatherCondition(
 //                        cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
 //                break;
 //            }
-//            case VIEW_TYPE_FUTURE_DAY: {
-//                // Get weather icon
-//                viewHolder.iconView.setImageResource(Utility.getIconResourceForWeatherCondition(
-//                        cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
-//                break;
-         //   }
-        }
+//        }
+////            case VIEW_TYPE_FUTURE_DAY: {
+////                // Get weather icon
+////                viewHolder.iconView.setImageResource(Utility.getIconResourceForWeatherCondition(
+////                        cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
+////                break;
+//         //   }
+       }
 
     /*
      * Este método nos permite obtener el Id de un drawable a través
