@@ -11,6 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -59,10 +62,11 @@ public class DefinitionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //return inflater.inflate(R.layout.fragment_main, container, false);
-        //lista = (ListView) findViewById(R.id.listview_definitions);
 
         //Inflate root fragment
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+        ListView lista = (ListView) rootView.findViewById(R.id.listview_definitions);
 
         //UI
 //        btnBuscar = (Button)rootView.findViewById(R.id.btnBuscar);
@@ -75,6 +79,9 @@ public class DefinitionFragment extends Fragment {
                 "Back up", "Bandwidth", "Banner", "Basics", "Benefit", "Blog", "Blue tooth",
                 "Bookmarks", "Boot up", "Broadband", "Browser", "Bugs", "Bytes"
         };
+
+        mDefinitionsAdapter = new DefinitionsAdapter(getActivity(), new ArrayList<Definitions>());
+        lista.setAdapter(mDefinitionsAdapter);
 
         definitionTask = new FetchDefinitionTask(getContext(), mDefinitionsAdapter);
         definitionTask.execute();
