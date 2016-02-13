@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +30,9 @@ import java.util.List;
 
         private DefinitionsAdapter mDefinitionsAdapter;
         private Context mContext;
+        EditText etPalabraIntro;
+        String paramWord;
+
 
         public FetchDefinitionTask(Context context, DefinitionsAdapter definitionsAdapter){
             mDefinitionsAdapter = definitionsAdapter;
@@ -45,12 +49,19 @@ import java.util.List;
 
             // Will contain the raw JSON response as a string.
             String definitionsJsonStr = null;
-
+//            URI uri = new URIBuilder()
+//                    .setScheme("https")
+//                    .setHost("montanaflynn-dictionary.p.mashape.com")
+//                    .setPath("/define?word=")
+//                    .addParameter("firstParam", paramWord)
+//                    .addParameters(listOfParameters)
+//                    .build();
 
             try {
                 // Construct the URL for the Dictionary query
                 // Possible parameters are avaiable at OWM's dictionary API page,
                 // at https://market.mashape.com/montanaflynn/dictionary
+
 
 
 

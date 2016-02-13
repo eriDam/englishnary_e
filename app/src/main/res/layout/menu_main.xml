@@ -117,7 +117,7 @@
                         android:textColor="#ffccc9c3"
                         android:textSize="14dp"
                         android:textStyle="bold"
-                        android:background="#0378f5" />
+                        android:background="#0101f6" />
                     <!--Subtitulo ver-->
                     <TextView
                         android:id="@+id/txt_ver_test"
@@ -205,16 +205,16 @@
                         android:scaleType="centerInside" />
                     <!--Titulo curso-->
                     <TextView
-                        android:id="@+id/txt_music"
+                        android:id="@+id/txt_less"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:padding="10dp"
-                        android:text="Dark side"
+                        android:text="Lessons"
                         android:textColor="#ffccc9c3"
                         android:textSize="14dp"
                         android:textStyle="bold"
-                        android:background="#ff3a3a3a" />
+                        android:background="#16b018" />
                     <!--Subtitulo ver-->
                     <TextView
                         android:id="@+id/txt_ver_music"
@@ -320,7 +320,7 @@
                         android:textColor="#ffccc9c3"
                         android:textSize="14dp"
                         android:textStyle="bold"
-                        android:background="#07bdfd" />
+                        android:background="#f40618" />
                     <!--Subtitulo ver-->
                     <TextView
                         android:id="@+id/txt_ver_tests"

@@ -7,6 +7,8 @@
     <string name="title_activity_detail_def">DetailDefActivity</string>
     <string name="empezar">Empezar</string>
     <string name="inicio">Inicio</string>
-    <string name="devtest">Devtest</string>
+    <string name="devtest">Devtest</string>Despliega para  buscar o escribe la palabra
+    <string name="spiner">Despliega para  buscar la palabra</string>
+    <string name="edit">Escribe para  buscar la palabra</string>
 
 </resources>

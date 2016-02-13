@@ -10,7 +10,7 @@
         android:id="@+id/imageView4"
         android:scaleType="centerCrop"
         android:contentDescription="bg_onCode"
-        android:background="@drawable/splash_blue" />
+        android:background="@drawable/splash_design" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -41,8 +41,7 @@
             android:layout_below="@+id/spinner"
             android:textColor="#ff8c9092"
             android:layout_weight="1"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal|top" />
+            android:layout_marginTop="30dp" />
     </LinearLayout>
 
 </FrameLayout>

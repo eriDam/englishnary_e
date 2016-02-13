@@ -46,7 +46,7 @@ public class Definitions implements Serializable{
 
     @Override
     public String toString() {
-        return "Definitions{" +
+        return "Definitions:  " +
                 //"definitions='" + definitions + '\n' +
                 ", text='" + text + '\n' +
                 ", atribution='" + atribution + '\n' +

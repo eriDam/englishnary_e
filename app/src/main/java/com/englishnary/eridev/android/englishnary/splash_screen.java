@@ -77,8 +77,7 @@ public class splash_screen extends ActionBarActivity {
                 new EPreguntas("In SQL, which of these statements adds a row to a table in a database?", "ADD", "INSERT", "UPDATE", "INCLUDE", "INSERT"),
                 new EPreguntas("In SQL, to eliminate duplicate rows of a SELECT statement is used ...", "NO DUPLICATE", "UNIQUE", "DISTINC", "GOUP BY", "DISTINC"),
                 new EPreguntas("Which of these statements the SET clause is used ", "DELETE", "DROP", "UPDATE", "SELECT", "UPDATE"),
-                new EPreguntas("If, else, for y while are...", "Functions to data acces", "Control sentences", "Data types", "The answers are not correct", "The answers are not correct "),
-                new EPreguntas("Int, char, float, string y boolean are", "Funtions access to data ", "Data access instructions ", " Data access instructions control", "Control sentences","Control sentences"),
+                new EPreguntas("Int, char, float, string y boolean are", "Funtions access to data ", "Data access instructions ", " Data access instructions control", "Data types","Data types"),
                 new EPreguntas("-what's your favorite app", "Anything", "This", "CodeOn", "MusicApp", "This"),
                 new EPreguntas("Where is Susan going?... \"\ngoing to London.", "They're", "She's", "Susan does", "Susan doing","Susan does"),
                 new EPreguntas("In SQL, which of these statements adds a row to a table in a database?", "ADD", "INSERT", "UPDATE", "INCLUDE", "INSERT"),
@@ -92,8 +91,8 @@ public class splash_screen extends ActionBarActivity {
        // super.onPreExecute();
         dialog = new ProgressDialog(splash_screen.this);
         dialog.setTitle("Mixing questions");
-        dialog.setMessage("Then you have each question with 4 options to choose an answer." +
-                "Enjoy and learn futur @ Dev :) ");
+        dialog.setMessage("Then you have each question with 4 options to choose an answer. " +
+                "Enjoy and learn futur@ Developer :) ");
         dialog.show();//Para mostrar
        }
 

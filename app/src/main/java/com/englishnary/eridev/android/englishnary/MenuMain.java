@@ -30,20 +30,12 @@ public class MenuMain extends AppCompatActivity {
         card_lessons = (CardView) findViewById(R.id.card_lessons);
         card_triv    = (CardView) findViewById(R.id.card_triv);
 
-//        imgButton2.setOnClickListener(new ImageButton.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent abreBuscar = new Intent(MenuMain.this, MainActivity.class);
-//                startActivity(abreBuscar);
-//
-//            }
-//        });
 
         //EVENTOS
         card_find.setOnClickListener(new CardView.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent abreBuscar = new Intent(MenuMain.this, MainActivity.class);
+                Intent abreBuscar = new Intent(MenuMain.this, UserCaptionActivity.class);
                 startActivity(abreBuscar);
 //                Intent abreLessons = new Intent(MainActivity.this, MapsActivity.class);
 //                startActivity(abreLessons);
